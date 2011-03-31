@@ -1,5 +1,5 @@
 # Pull in some spec settings.
-require File.join( File.dirname(__FILE__), '..', '..', 'spec_helper' )
+#require File.join( File.dirname(__FILE__), '..', '..', 'spec_helper' )
 
 # Pull in all the Ruby files in this directory.
 Dir.glob( File.join( File.dirname(__FILE__), '*.rb' ) ).each do |file|
