@@ -17,10 +17,10 @@ describe StateNameMixer do
 
   it "should have the same exact result set as the internal Ruby method" do
 
-    @reports << Benchmark.measure do
+    Benchmark.bm do
       @original_states, @resultant_states = *StateNameMixer.mix_it_up( all_states )
-      @original_states.collect{ |s| s.split().flatten() }.sort.should eql( 
-        @resultant_states.collect{ |s| s.split().flatten() }.sort
+      @original_states.collect{ |s| s.split()}.flatten().sort.should eql( 
+        @resultant_states.collect{ |s| s.split().flatten() }.flatten().sort
       )
     end
   end
